@@ -6,7 +6,7 @@ var cleanCss = require('clean-css');
 
 module.exports = function(html, options) {
   var tags = {
-    amp: ['img', 'video']
+    amp: ['img', 'video', 'iframe']
   };
 
   var $, round;
@@ -104,7 +104,7 @@ module.exports = function(html, options) {
 				file = setFile(String(request(path).data));
 			};
 		} catch (err) {
-			console.dir(err);	
+			console.dir(err);
 		}
 
     $(this).replaceWith(file);
